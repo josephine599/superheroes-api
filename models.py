@@ -1,8 +1,7 @@
-from flask_sqlalchemy import SQLAlchemy
+from config import db
 from sqlalchemy.orm import validates
 from sqlalchemy_serializer import SerializerMixin
 
-db = SQLAlchemy()
 
 class Hero(db.Model, SerializerMixin):
     __tablename__ = "heroes"
